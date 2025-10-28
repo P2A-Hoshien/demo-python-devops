@@ -1,0 +1,81 @@
+# ========================================
+# Python / FastAPI / uv Project
+# ========================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# ========================================
+# Virtual Environments
+# ========================================
+.venv/
+venv/
+.env/
+# uv local environment
+.uv/
+
+# ========================================
+# Dependency / Package files
+# ========================================
+# uv lock and pyproject are needed, so keep them!
+# (Don't ignore pyproject.toml or uv.lock)
+# *.lock  <-- DON'T DO THIS!
+
+# ========================================
+# Test and coverage
+# ========================================
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+
+# ========================================
+# Logs
+# ========================================
+*.log
+logs/
+tmp/
+*.tmp
+
+# ========================================
+# Docker / Build
+# ========================================
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+Dockerfile~
+docker-compose.override.yml
+
+# Docker volumes and runtime data
+**/docker-data/
+**/runner/work/
+**/runner/_work/
+**/runner/_diag/
+
+# ========================================
+# IDE / Editor / System files
+# ========================================
+# VSCode
+.vscode/
+# JetBrains
+.idea/
+# macOS / Linux / Windows system files
+.DS_Store
+Thumbs.db
+*~
+
+# ========================================
+# Miscellaneous
+# ========================================
+# Local config / secrets
+.env.local
+.env.*.bak
+secrets*.yml
+
