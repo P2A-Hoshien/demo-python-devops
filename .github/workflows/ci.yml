@@ -7,22 +7,14 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  构建项目:
     runs-on: [self-hosted, linux]
 
     steps:
       - name: 拉取代码
         uses: actions/checkout@v4
 
-      - name: 安装Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
-
-      - name: 安装UV
-        run: pip install uv
-
-      - name: 安装依赖项
+s     - name: 安装依赖项
         run: uv sync --frozen --no-dev
 
       - name: 运行测试
