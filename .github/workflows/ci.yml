@@ -8,28 +8,28 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux]
 
     steps:
-      - name: Checkout code
+      - name: 拉取代码
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: 安装Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install uv
+      - name: 安装UV
         run: pip install uv
 
-      - name: Install dependencies
+      - name: 安装依赖项
         run: uv sync --frozen --no-dev
 
-      - name: Run tests
+      - name: 运行测试
         run: |
           echo "No tests yet - running sanity check"
           uv run python -m http.server --help
 
-      - name: Build Docker image
+      - name: 构建Docker镜像
         run: docker build -t devops-demo .
 
