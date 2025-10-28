@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  构建项目:
+  build:
     runs-on: [self-hosted, linux]
 
     steps:
