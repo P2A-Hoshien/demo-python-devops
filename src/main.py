@@ -4,6 +4,7 @@ import socket
 
 app = FastAPI(title="DevOps Demo API")
 
+
 @app.get("/health")
 def health_check():
     """心跳检查接口"""
